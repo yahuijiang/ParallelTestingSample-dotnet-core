@@ -40,7 +40,11 @@ jobs:
       projects: '**/*Tests/*Tests.csproj'
       arguments: '--no-restore --output $(Build.SourcesDirectory)/out'
       zipAfterPublish: false
-
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
   - task: DotNetCoreCLI@2
     displayName: Test
     inputs:
