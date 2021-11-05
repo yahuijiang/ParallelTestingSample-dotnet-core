@@ -9,8 +9,6 @@ jobs:
 - job: 'ParallelTesting'
   pool:
     name: Hosted Ubuntu 1604
-  strategy:
-    parallel: 5
   displayName: Run tests in parallel
 
   steps:
