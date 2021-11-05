@@ -38,7 +38,7 @@ jobs:
       command: 'publish'
       publishWebProjects: false
       projects: '**/*Tests/*Tests.csproj'
-      arguments: '--no-restore --output $(Build.SourcesDirectory)/out'
+      arguments: '--no-restore --output $(Build.ArtifactStagingDirectory)/out'
       zipAfterPublish: false
   - task: PublishBuildArtifacts@1
     inputs:
