@@ -34,6 +34,14 @@ jobs:
     displayName: 'Echo slicing filter condition'
 
   - task: DotNetCoreCLI@2
+    inputs:
+      command: 'publish'
+      publishWebProjects: false
+      projects: '**/*Tests/*Tests.csproj'
+      arguments: '--no-restore --output $(Build.SourcesDirectory)/out'
+      zipAfterPublish: false
+
+  - task: DotNetCoreCLI@2
     displayName: Test
     inputs:
       command: test
