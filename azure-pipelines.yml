@@ -38,4 +38,4 @@ jobs:
     inputs:
       command: test
       projects: '**/*Tests/*Tests.csproj'
-      arguments: '--no-build --filter "$(targetTestsFilter)"'
+      arguments: '--filter "$(targetTestsFilter)"'
