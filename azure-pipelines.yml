@@ -8,7 +8,7 @@ schedules:
 jobs:
 - job: 'ParallelTesting'
   pool:
-    name: Hosted Ubuntu 1604
+    name: 'ubuntu-latest'
   displayName: Run tests in parallel
 
   steps:
